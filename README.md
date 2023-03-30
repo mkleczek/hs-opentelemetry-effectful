@@ -1,4 +1,4 @@
-# haskell-template
+# hs-opentelemetry-effectful
 
 Get a Haskell development environment up and running quickly. Thanks to Nix, this template is optimized for a fully reproducible and friendly development environment. It is based on:
 
@@ -15,7 +15,7 @@ If you have an *existing* Haskell project, you should probably use https://githu
 
 *tldr: Install Nix, enable Flakes, open in VSCode and run `, run`.*
 
-For details, see: https://srid.ca/haskell-template/start
+For details, see: https://srid.ca/hs-opentelemetry-effectful/start
 
 ## Tips
 
@@ -23,11 +23,11 @@ For details, see: https://srid.ca/haskell-template/start
 - Run `nix build .#check -L` to run the flake checks.
 - Run `, fmt` in nix shell to autoformat the project. This uses [treefmt](https://github.com/numtide/treefmt).
 - Run `, docs` to start Hoogle with packages in your cabal file.
-- Run the application without installing: `nix run github:srid/haskell-template` (or `nix run .` from checkout)
+- Run the application without installing: `nix run github:srid/hs-opentelemetry-effectful` (or `nix run .` from checkout)
 - Common workflows
   - Adding library dependencies in Nix: https://haskell.flake.page/dependency
-  - Adding tests: https://srid.ca/haskell-template/tests
+  - Adding tests: https://srid.ca/hs-opentelemetry-effectful/tests
 
 ## Discussions
 
-Questions? Ideas? Suggestions? You may post them here: https://github.com/srid/haskell-template/discussions
+Questions? Ideas? Suggestions? You may post them here: https://github.com/srid/hs-opentelemetry-effectful/discussions

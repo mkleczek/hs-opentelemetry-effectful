@@ -1,11 +1,11 @@
 cabal-version:      2.4
-name:               haskell-template
+name:               hs-opentelemetry-effectful
 version:            0.1.0.0
 license:            MIT
-copyright:          2022 Sridhar Ratnakumar
-maintainer:         srid@srid.ca
-author:             Sridhar Ratnakumar
-category:           Web
+copyright:          2022 Michał Kłeczek
+maintainer:         michal@kleczek.org
+author:             Michał Kłeczek
+category:           OpenTelemetry, Telmetry, Monitoring, Observability
 
 -- TODO: Before hackage release.
 -- A short (one-line) description of the package.
@@ -26,11 +26,6 @@ common shared
     -Wall -Wincomplete-record-updates -Wincomplete-uni-patterns
     -Wmissing-deriving-strategies -Wunused-foralls -Wunused-foralls
     -fprint-explicit-foralls -fprint-explicit-kinds
-
-  mixins:
-    base hiding (Prelude),
-    relude (Relude as Prelude, Relude.Container.One),
-    relude
 
   default-extensions:
     NoStarIsType
@@ -74,23 +69,15 @@ common shared
     ViewPatterns
 
   build-depends:
-    , aeson
-    , async
     , base          >=4.13.0.0 && <4.18.0.0.0
-    , data-default
-    , directory
-    , filepath
-    , mtl
-    , optics-core
-    , profunctors
-    , relude        >=1.0
-    , shower
-    , time
-    , with-utf8
+    , effectful-core
+    , hs-opentelemetry-api
+    , text
 
   hs-source-dirs:     src
   default-language:   Haskell2010
 
-executable haskell-template
+library
   import:  shared
-  main-is: Main.hs
+  exposed-modules:
+    Effectful.OpenTelemetry

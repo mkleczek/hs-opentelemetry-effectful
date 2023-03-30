@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh '''
                     # Because 'nix flake check' is not system-aware
-                    # See https://srid.ca/haskell-template/checks
+                    # See https://srid.ca/hs-opentelemetry-effectful/checks
                     nix run nixpkgs#sd \
                         'systems = nixpkgs.lib.systems.flakeExposed' \
                         'systems = [ "x86_64-linux" ]' \
